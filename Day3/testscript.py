@@ -1,3 +1,4 @@
+l=input('enter ')
 '''
 import sys
 try:
