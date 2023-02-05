@@ -1,8 +1,15 @@
+class Human:
+    def __init__(self):
+        __name='add'
+        self.name='sas'
+h=Human()
+print(h)
+'''
 l=['php','python','ruby','r']
 it=map(lambda x:x.capitalize(),l)
 print(type(it))
 print(type(next(it)))
-'''
+
 for x in l:
     print(x.capitalize())
 
