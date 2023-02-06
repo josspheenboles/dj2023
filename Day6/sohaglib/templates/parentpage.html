@@ -10,12 +10,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Fashion</title>
+      <title>
+         {%block title%}
+         parent page
+         {%endblock%}
+      </title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %} ">
+
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
       <!-- style css -->
       <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
       <!-- Responsive-->
@@ -47,11 +52,11 @@
                   <div class="col-sm-12">
                      <div class="custom_menu">
                         <ul>
-                           <li><a href="{% url 'Book_List' %}">List Book</a></li>
-                           <li><a href="{% url 'Book_Add' %}">Add Book</a></li>
-                           <li><a href="{% url 'Catagory_Add' %}">Add Catagory</a></li>
-                           <li><a href="{% url 'Catagory_List' %}">List Catagory</a></li>
+                          <li><a href="{% url 'Book_List' %}">Books</a></li>
+                  <li><a href="{%url 'Book_Add'%}">Add Book</a></li>
+                   <li><a href="{%url 'Catagory_List'%}">Catagories</a></li>
 
+                  <li><a href="{%url 'Catagory_Add'%}">Add Catagory</a></li>
                         </ul>
                      </div>
                   </div>
@@ -64,6 +69,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-sm-12">
+
                      <div class="logo"><a href="index.html"><img src="{% static 'images/logo.png' %}"></a></div>
                   </div>
                </div>
@@ -105,11 +111,11 @@
                   <div class="header_box">
                      <div class="lang_box ">
                         <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-                        <img src="images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                        <img src="{% static 'images/flag-uk.png' %}" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu ">
                            <a href="#" class="dropdown-item">
-                           <img src="images/flag-france.png" class="mr-2" alt="flag">
+                           <img src="{% static 'images/flag-france.png' %}" class="mr-2" alt="flag">
                            French
                            </a>
                         </div>
@@ -175,24 +181,27 @@
       <!-- banner bg main end -->
       <!-- fashion section start -->
       <div class="fashion_section">
-         {{username}}
+        {%block content%}
+         sjdlajldjsdjl
+         {%endblock%}
       </div>
       <!-- fashion section end -->
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
-            <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+            <div class="footer_logo"><a href="index.html"><img src="{% static 'images/footer-logo.png' %}"></a></div>
             <div class="input_bt">
                <input type="text" class="mail_bt" placeholder="Your Email" name="Your Email">
                <span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
             </div>
             <div class="footer_menu">
                <ul>
-                  <li><a href="#">Best Sellers</a></li>
-                  <li><a href="#">Gift Ideas</a></li>
-                  <li><a href="#">New Releases</a></li>
-                  <li><a href="#">Today's Deals</a></li>
-                  <li><a href="#">Customer Service</a></li>
+                  <li><a href="#">Books</a></li>
+                  <li><a href="#">Add Book</a></li>
+                   <li><a href="#">Catagories</a></li>
+
+                  <li><a href="#">Add Catagory</a></li>
+
                </ul>
             </div>
             <div class="location_main">Help Line  Number : <a href="#">+1 1800 1200 1200</a></div>
